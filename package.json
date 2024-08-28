@@ -1,0 +1,29 @@
+{
+  "name": "chrome-extension-example",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && mv out/_next out/next && rsync ./public ./out /E",
+    "start": "next start",
+    "lint": "next lint",
+    "build:background": "tsc public/service-worker.ts --outDir ./public"
+  },
+  "dependencies": {
+    "axios": "^1.7.5",
+    "next": "14.2.6",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.270",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.6",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  }
+}
